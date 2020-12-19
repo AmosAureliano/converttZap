@@ -27,7 +27,7 @@
 <h3 id="tecnologias">Tecnologias</h3>
 <br>
 
-<p align="center">
+<p>
    • <a href="#">React</a><br>
    • <a href="#">Node.JS</a> 
 </p>
