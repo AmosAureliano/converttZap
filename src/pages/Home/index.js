@@ -1,9 +1,33 @@
-import React from 'react';
+import React, {useState, useCallback} from 'react';
+
+
+
 import LogoPrincipal from '../../assets/images/main-logo.png';
 import logoEncurt from '../../assets/images/logo.png';
+
 import './style.css';
 
 export default function Home(){
+    const [value, setValue] = useState({});
+
+    var valueOBJ = value;
+    function buildLink(val){
+        let number = val.tel;
+        let message = val.message;
+
+        /*
+        let result = document.querySelector('#link-result');
+
+        result = number + " - " + message;
+        */
+        console.log(number + " - " + message)
+    }
+    const handleChange = useCallback((e) => {
+        setValue({...value,
+            [e.currentTarget.name]: e.currentTarget.value
+        })
+    }, [value])
+    
     return(
         <div id="body">
             <div id="content-main">
@@ -12,11 +36,12 @@ export default function Home(){
 
                 <div id="form">
                     <label for="tel-number">Informe o número de telefone</label>
-                    <input type="tel" id="tel-number"/>
+                    <input  placeholder="Digite somente números" name="tel" onChange={handleChange} id="tel-number"/>
                     <label for="message">Informe a mensagem</label>
-                    <input type="text" id="message"/>
-
-                    <button>GERAR LINK</button>
+                    <textarea type="text" id="message" name="message" onChange={handleChange}/>
+                    
+                    <span id="link-result"></span>
+                    <button onClick={buildLink(valueOBJ)}>GERAR LINK</button>
                     
                 </div>
                 <span id="warning-data">*Não guardamos nenhum dado informado</span>
