@@ -2,6 +2,8 @@
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+/*Estilização mobile*/
 #content-main{
     display: flex;
     flex-direction: column;
@@ -76,4 +78,37 @@
 }
 #img-footer img{
     width: 10%;
+}
+
+/*Estlização para desktop*/
+
+@media(min-width: 760px){
+    #descr{
+        margin-top: 10%;
+    }
+    #content-main{
+        position: relative;
+        float: left;
+        width: 40%;
+        height: 100%;
+    }
+    #text-informations{
+        position: relative;
+        float: right;
+        width: 40%;
+        height: 80vh;
+        padding: 5%;
+    }
+    #text-informations h2{
+        font-size: 35px;
+    }
+    #text-informations p{
+        margin-top: 8%;
+        font-size: 25px;
+        line-height: 60px;
+    }
+    #img-footer{
+        margin-top: 20%;
+    }
+   
 }
