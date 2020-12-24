@@ -12,7 +12,7 @@ export default function Home(){
 
                 <div id="form">
                     <label for="tel-number">Informe o número de telefone</label>
-                    <input type="number" id="tel-number"/>
+                    <input type="tel" id="tel-number"/>
                     <label for="message">Informe a mensagem</label>
                     <input type="text" id="message"/>
 
