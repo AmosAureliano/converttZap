@@ -1,32 +1,25 @@
 import React, {useState, useCallback} from 'react';
 
 
-
 import LogoPrincipal from '../../assets/images/main-logo.png';
 import logoEncurt from '../../assets/images/logo.png';
 
 import './style.css';
 
 export default function Home(){
-    const [value, setValue] = useState({});
+  
 
-    var valueOBJ = value;
-    function buildLink(val){
-        let number = val.tel;
-        let message = val.message;
+    function buildLink(){
 
-        /*
-        let result = document.querySelector('#link-result');
-
-        result = number + " - " + message;
-        */
-        console.log(number + " - " + message)
+        let numberTel = document.querySelector("#tel-number").value;
+        numberTel.replace(/\D/g, '');
+        let message = document.querySelector("#message").value;
+        let result = document.querySelector("#link-result");
+        
+        result.innerHTML = "https://api.whatsapp.com/send?phone=55" + numberTel + "&text=" + message;
+        console.log(numberTel + message)
+        
     }
-    const handleChange = useCallback((e) => {
-        setValue({...value,
-            [e.currentTarget.name]: e.currentTarget.value
-        })
-    }, [value])
     
     return(
         <div id="body">
@@ -36,12 +29,12 @@ export default function Home(){
 
                 <div id="form">
                     <label for="tel-number">Informe o número de telefone</label>
-                    <input  placeholder="Digite somente números" name="tel" onChange={handleChange} id="tel-number"/>
+                    <input  placeholder="informe a partir do DDD" type="number" name="tel" id="tel-number"/>
                     <label for="message">Informe a mensagem</label>
-                    <textarea type="text" id="message" name="message" onChange={handleChange}/>
+                    <textarea type="text" id="message" name="message" />
                     
                     <span id="link-result"></span>
-                    <button onClick={buildLink(valueOBJ)}>GERAR LINK</button>
+                    <button onClick={buildLink}>GERAR LINK</button>
                     
                 </div>
                 <span id="warning-data">*Não guardamos nenhum dado informado</span>
