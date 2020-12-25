@@ -35,7 +35,7 @@ export default function Home(){
                     
                     <span id="link-result"></span>
                     <button onClick={buildLink}>GERAR LINK</button>
-                    
+                    {/*Gerador de link funcionando! falta colocar botão de copiar para área de transferência */}
                 </div>
                 <span id="warning-data">*Não guardamos nenhum dado informado</span>
                
