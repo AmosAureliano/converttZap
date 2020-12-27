@@ -1,5 +1,4 @@
-import React, {useState, useCallback} from 'react';
-
+import React from 'react';
 
 import LogoPrincipal from '../../assets/images/main-logo.png';
 import logoEncurt from '../../assets/images/logo.png';
@@ -7,20 +6,29 @@ import logoEncurt from '../../assets/images/logo.png';
 import './style.css';
 
 export default function Home(){
-  
+    
 
+    
     function buildLink(){
-
         let numberTel = document.querySelector("#tel-number").value;
         numberTel.replace(/\D/g, '');
         let message = document.querySelector("#message").value;
-        let result = document.querySelector("#link-result");
-        
+        var result = document.querySelector("#link-result");
         result.innerHTML = "https://api.whatsapp.com/send?phone=55" + numberTel + "&text=" + message;
-        console.log(numberTel + message)
-        
+        document.execCommand('copy');
     }
+/*
+    const copyToClipboard = function(){
+        console.log("chamando função");
+        let btn = document.querySelector('#copy-link');
+        btn.addEventListener('click', function(e) {
+        let text = document.querySelector('#link-result');
+        text.select();
+        document.execCommand('copy');
+     }
     
+    }
+*/
     return(
         <div id="body">
             <div id="content-main">
@@ -29,13 +37,14 @@ export default function Home(){
 
                 <div id="form">
                     <label for="tel-number">Informe o número de telefone</label>
-                    <input  placeholder="informe a partir do DDD" type="number" name="tel" id="tel-number"/>
+                    <input  placeholder="Informe a partir do DDD" type="number" name="tel" id="tel-number"/>
                     <label for="message">Informe a mensagem</label>
-                    <textarea type="text" id="message" name="message" />
+                    <textarea type="text" id="message" name="message" placeholder="Olá tudo bem?!" />
                     
                     <span id="link-result"></span>
+                    {/*<button id="copy-link" onClick={copyToClipboard}>COPIAR LINK</button>*/}
                     <button onClick={buildLink}>GERAR LINK</button>
-                    {/*Gerador de link funcionando! falta colocar botão de copiar para área de transferência */}
+                
                 </div>
                 <span id="warning-data">*Não guardamos nenhum dado informado</span>
                
