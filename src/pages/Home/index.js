@@ -1,14 +1,10 @@
 import React from 'react';
-
 import LogoPrincipal from '../../assets/images/main-logo.png';
 import logoEncurt from '../../assets/images/logo.png';
-
 import './style.css';
 
 export default function Home(){
-    
 
-    
     function buildLink(){
         let numberTel = document.querySelector("#tel-number").value;
         numberTel.replace(/\D/g, '');
@@ -17,7 +13,7 @@ export default function Home(){
         result.innerHTML = "https://api.whatsapp.com/send?phone=55" + numberTel + "&text=" + message;
         document.execCommand('copy');
     }
-/*
+    /*
     const copyToClipboard = function(){
         console.log("chamando função");
         let btn = document.querySelector('#copy-link');
@@ -25,29 +21,26 @@ export default function Home(){
         let text = document.querySelector('#link-result');
         text.select();
         document.execCommand('copy');
-     }
-    
+        }
     }
-*/
+    */
+
     return(
         <div id="body">
+            
             <div id="content-main">
                 <img src={LogoPrincipal}/>
                 <h1 id="descr">Gerador de link para Whatsapp</h1>
-
                 <div id="form">
                     <label for="tel-number">Informe o número de telefone</label>
                     <input  placeholder="Informe a partir do DDD" type="number" name="tel" id="tel-number"/>
                     <label for="message">Informe a mensagem</label>
                     <textarea type="text" id="message" name="message" placeholder="Olá tudo bem?!" />
-                    
                     <span id="link-result"></span>
                     {/*<button id="copy-link" onClick={copyToClipboard}>COPIAR LINK</button>*/}
-                    <button onClick={buildLink}>GERAR LINK</button>
-                
+                    <button onClick={buildLink}>GERAR LINK</button>             
                 </div>
                 <span id="warning-data">*Não guardamos nenhum dado informado</span>
-               
             </div>
 
             <div id="text-informations">
