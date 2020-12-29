@@ -10,11 +10,15 @@ export default function Home(){
         numberTel.replace(/\D/g, '');
         let message = document.querySelector("#message").value;
         var result = document.querySelector("#link-result");
-        result.innerHTML = "https://api.whatsapp.com/send?phone=55" + numberTel + "&text=" + message;
-
-        document.getElementById("buttons-before").style.display = "flex";
-        document.getElementById("gera-link").style.display = "none";
-
+        if(numberTel == "" && message == ""){
+            result.innerHTML = "*Preencha os campos";
+        }else if(numberTel == "" || message == ""){
+            result.innerHTML = "*Preencha os campos"
+        }else{       
+            result.innerHTML = "https://api.whatsapp.com/send?phone=55" + numberTel + "&text=" + message;
+            document.getElementById("buttons-before").style.display = "flex";
+            document.getElementById("gera-link").style.display = "none";
+        }
         
     }
 
