@@ -11,7 +11,15 @@ export default function Home(){
         let message = document.querySelector("#message").value;
         var result = document.querySelector("#link-result");
         result.innerHTML = "https://api.whatsapp.com/send?phone=55" + numberTel + "&text=" + message;
-        document.execCommand('copy');
+
+        document.getElementById("buttons-before").style.display = "flex";
+        document.getElementById("gera-link").style.display = "none";
+
+        
+    }
+
+    function reload(){
+        window.location.reload();
     }
     /*
     const copyToClipboard = function(){
@@ -37,8 +45,14 @@ export default function Home(){
                     <label for="message">Informe a mensagem</label>
                     <textarea type="text" id="message" name="message" placeholder="Olá tudo bem?!" />
                     <span id="link-result"></span>
-                    {/*<button id="copy-link" onClick={copyToClipboard}>COPIAR LINK</button>*/}
-                    <button onClick={buildLink}>GERAR LINK</button>             
+
+                    <div id="buttons-before">
+                        <button id="reload" onClick={reload} style={{backgroundColor: '#6967B6'}}>Gerar Novo Link</button>
+                        <button id="copy-link">Copiar</button>
+
+                    </div>
+                   
+                    <button onClick={buildLink} id="gera-link">Gerar Link</button>             
                 </div>
                 <span id="warning-data">*Não guardamos nenhum dado informado</span>
             </div>
