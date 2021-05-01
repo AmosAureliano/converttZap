@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import LogoPrincipal from '../../assets/images/main-logo.png';
-import logoEncurt from '../../assets/images/logo.png';
+
 import './style.css';
 
 export default function Home(){
@@ -40,7 +40,7 @@ export default function Home(){
     return(
         <div id="body">            
             <div id="content-main">
-                <img src={LogoPrincipal}/>
+                <img src={LogoPrincipal} alt="Logo do site"/>
                 <h1 id="descr">Gerador de link para Whatsapp</h1>
                 <div id="form">
                     <label for="tel-number">Informe o número de telefone</label>
