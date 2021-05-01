@@ -6,11 +6,6 @@
 <img src=https://ik.imagekit.io/ygmiz34t5/2021-05-01_16-23-29_Trim__2__ATW10bYsW.gif>
 </h1>
 
-# Índice
- - [Sobre o Projeto](#-sobre-o-projeto)
- - [Tecnologias Utilizadas](#-tecnologias-utilizadaas)
- - [Como baixar o projeto](#-como-baixar-o-projeto)
-
 ## 📃 **Sobre o Projeto** 
 ______
    O projeto **ConverttZap** foi desenvolvido para praticar **ReactJs e CSS**, baseado no **[Convertte](convertte.com.br/gerador-link-whatsapp/)**. Trata-se de um gerador de links, visado usuários que trabalham com **vendas** e **marketing**. Tais links são muitos utilizados na "BIO" do Instagram, por exemplo.
