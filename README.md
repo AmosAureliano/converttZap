@@ -2,35 +2,58 @@
 <img src=https://i.imgur.com/NJGepyx.png></img>
 </h1>
 
-<h2>Convertt Zap</h2>
-<p align=center id="descricao">🚀Interface geradora de links no formato API Whatsapp</p>
+<h1 align=center>
+<img src=https://ik.imagekit.io/ygmiz34t5/2021-05-01_16-23-29_Trim__2__ATW10bYsW.gif>
+</h1>
+
+# Índice
+ - [Sobre o Projeto](#-sobre-o-projeto)
+ - [Tecnologias Utilizadas](#-tecnologias-utilizadaas)
+ - [Como baixar o projeto](#-como-baixar-o-projeto)
+
+## 📃 **Sobre o Projeto** 
+______
+   O projeto **ConverttZap** foi desenvolvido para praticar **ReactJs e CSS**, baseado no **[Convertte](convertte.com.br/gerador-link-whatsapp/)**. Trata-se de um gerador de links, visado usuários que trabalham com **vendas** e **marketing**. Tais links são muitos utilizados na "BIO" do Instagram, por exemplo.
+
+
+<br>
+
+## 👨‍💻 **Tecnologias Utilizadas**
+___
+Esse Projeto foi desenvolvido utilizando as seguintes tecnologias:
+ - [ReactJS](https://pt-br.reactjs.org/)
+ - CSS
+
+
+<br>
+
+## ⬇ **Como baixar o projeto**
+___
+``` bash
+   # Clonar o repositório na sua máquina
+   $ git clone https://github.com/AurelianoAmosG20/converttZap.git
+   
+   # Entrar no diretório
+   $ cd converttZap
+   
+   # Instalar depedências (verifique seu gerenciador de pacotes )
+   $ yarn install
+   
+   #Iniciar Projeto
+   $ yarn start 
+```
+
+<br>
+
+## ***Meus Contatos***
+___
+- [LinkedIn](https://www.linkedin.com/in/am%C3%B3s-aureliano-689a36187/)
+- [Whatsapp](https://api.whatsapp.com/send?phone=5582993351194)
+- [Instagram](https://www.instagram.com/amos_aureliano/)
+- [Email](mailto:amos.aureliano@gmail.com)
+
+<br>
 
 <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=blue"/>
 
-<br>
-<p align="center">
- <a href="#descricao">Descrição</a> •
- <a href="#como-usar">Como Utilizar</a> • 
- <a href="#tecnologias">Tecnologias</a> • 
- <a href="#autor">Autor</a>
-</p>
-<br>
 
-<h2> 
-	🚧  Convertt Zapp -> Em construção...  🚧
-</h2>
-
-<br>
-<h3 id="como-usar">Como Utilizar</h3>
-<br>
-
-<h3 id="tecnologias">Tecnologias</h3>
-<br>
-
-<p>
-   • <a href="#">React</a><br>
-   • <a href="#">Node.JS</a> 
-</p>
-
-<br>
-<h3 id="autor">Autor</h3>
