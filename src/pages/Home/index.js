@@ -7,16 +7,16 @@ export default function Home(){
     const[link, setLink] = useState();
 
     function buildLink(){
-        let numberTel = document.querySelector("#tel-number").value;
-        numberTel.replace(/\D/g, '');
+        let phoneNumber = document.querySelector("#tel-number").value;
+        phoneNumber.replace(/\D/g, '');
         let message = document.querySelector("#message").value;
         let result = document.querySelector("#link-result");
-        if(numberTel == "" && message == ""){
+        if(phoneNumber === "" && message === ""){
             result.innerHTML = "*Preencha os campos";
-        }else if(numberTel == "" || message == ""){
+        }else if(phoneNumber === "" || message === ""){
             result.innerHTML = "*Preencha os campos";
         }else{       
-            result.innerHTML = "https://api.whatsapp.com/send?phone=55" + numberTel + "&text=" + message;
+            result.innerHTML = "https://api.whatsapp.com/send?phone=55" + phoneNumber + "&text=" + message;
             document.getElementById("buttons-before").style.display = "flex";
             document.getElementById("gera-link").style.display = "none";
             setLink(result.innerHTML)
@@ -38,8 +38,7 @@ export default function Home(){
     }
 
     return(
-        <div id="body">
-            
+        <div id="body">            
             <div id="content-main">
                 <img src={LogoPrincipal}/>
                 <h1 id="descr">Gerador de link para Whatsapp</h1>
@@ -65,7 +64,6 @@ export default function Home(){
                     4 - Copie o link e compartilhe<br/>
                     5 - Antes de usar, faça o teste
                 </p>
-                <div id="img-footer"><img src={logoEncurt}/></div>
             </div>
         </div>
     );

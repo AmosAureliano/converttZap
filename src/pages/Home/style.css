@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -10,6 +11,8 @@
     align-items: center;
     font-family: 'Roboto', sans-serif;
     padding: 5%;
+   
+    
 }
 #descr{
     margin-top: 1%;
@@ -38,6 +41,7 @@
 #form button{
     margin-top: 4%;
     font-weight: bold;
+    font-size: 18px;
     background-color: #34AF23;
     padding: 3%;
     color: #FFFF;
@@ -69,10 +73,14 @@
     color: #FF0000;
 }
 #text-informations{
+    position: relative;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #6967B6;
     padding: 5%;
-    bottom: 0;
-    margin-bottom: 0;
 }
 #text-informations h2{
     color: #FFFF;
@@ -95,7 +103,7 @@
 
 /*Estlização para desktop*/
 
-@media(min-width: 760px){
+@media(min-width: 1200px){
     #descr{
         margin-top: 10%;
     }
@@ -109,8 +117,12 @@
         position: relative;
         float: right;
         width: 40%;
-        height: 80vh;
+        height: 85vh;
         padding: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     #text-informations h2{
         font-size: 35px;
